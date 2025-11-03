@@ -1,0 +1,82 @@
+@import './_variables';
+@import './_reset';
+@import './_containers';
+
+.header {
+  padding: 1.5rem 0;
+  background: $white;
+
+  .nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  /* Logo */
+  .logo {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+
+    img {
+      width: 100%;
+    }
+
+    span {
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: $black;
+    }
+  }
+
+  /* Navbar Menu */
+  nav {
+    ul {
+      display: flex;
+      align-items: center;
+      list-style: none;
+      gap: 2rem;
+
+      li {
+        a {
+          text-decoration: none;
+          font-size: 1rem;
+          color: $secondary;
+          transition: color .3s ease;
+
+          &.active {
+            color: $linkcolor;
+            font-weight: 500;
+          }
+
+          &:hover {
+            color: $linkcolor;
+          }
+        }
+
+        li :nth-last-child {
+            margin-bottom: 1rem;
+          }
+        }
+      }
+    }
+  }
+
+  /* CTA Button */
+  .nav-btn {
+    a {
+      display: inline-block;
+      padding: .75rem 1.8rem;
+      background: $black;
+      color: $white;
+      border-radius: 30px;
+      font-size: 1rem;
+      font-weight: 500;
+      text-decoration: none;
+      transition: all .3s ease;
+
+      &:hover {
+        opacity: .8;
+      }
+    }
+  }
